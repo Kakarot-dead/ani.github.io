@@ -101,6 +101,32 @@
 				</div>
 			</div>
 		</div>
+
+		
+		<script>
+  var messages = document.getElementById("messages").children;  // Get all the messages
+  var index = 0;  // Start with the first message
+  
+  function displayNextMessage() {
+    // Hide the current message
+    messages[index].style.display = "none";
+    
+    // Move to the next message
+    index = (index + 1) % messages.length;
+    
+    // Show the next message
+    messages[index].style.display = "block";
+    
+    setTimeout(displayNextMessage, 4000);
+  }
+  
+  // Start displaying messages
+  displayNextMessage();
+</script>
+		
+		
+		
+		
 		<div class="row message">
 			<div class="col-md-12">
 				<p>Happy Birthday to a sweet Georgia peach</p>
